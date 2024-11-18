@@ -930,3 +930,79 @@ Brand: Tesla, Year: 2023
 
 ---
 
+### **Example: Class with Object and Constructor**
+
+Here’s a simple example to illustrate how to define a class, create objects, and use constructors in C#:
+
+---
+
+#### **Code Example**:
+```csharp
+using System;
+
+class Person
+{
+    // Instance variables (fields)
+    public string Name;
+    public int Age;
+
+    // Constructor
+    public Person(string name, int age)
+    {
+        // Assign values to instance variables
+        Name = name;
+        Age = age;
+    }
+
+    // Method to display person's details
+    public void DisplayDetails()
+    {
+        Console.WriteLine($"Name: {Name}, Age: {Age}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Creating objects using the constructor
+        Person person1 = new Person("Alice", 25);
+        Person person2 = new Person("Bob", 30);
+
+        // Calling the method to display details
+        person1.DisplayDetails();
+        person2.DisplayDetails();
+    }
+}
+```
+
+---
+
+#### **Explanation**:
+
+1. **Class Definition**:
+   - The `Person` class has two instance variables, `Name` and `Age`, which store the name and age of a person.
+   - The class includes a **constructor** (`Person(string name, int age)`) that initializes these variables when an object is created.
+
+2. **Constructor**:
+   - The constructor takes two parameters: `name` and `age`.
+   - These parameters are assigned to the instance variables `Name` and `Age` using the `this` keyword implicitly.
+
+3. **Object Creation**:
+   - Objects `person1` and `person2` are created using the `new` keyword, passing the required arguments to the constructor.
+
+4. **Method**:
+   - The `DisplayDetails` method is used to print the details of the person.
+
+---
+
+#### **Output**:
+```
+Name: Alice, Age: 25
+Name: Bob, Age: 30
+```
+
+---
+
+
+
