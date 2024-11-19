@@ -70,9 +70,71 @@ A C# program consists of one or more classes, which are building blocks that con
 #### **4. Main Method**  
 The `Main` method is the entry point of a C# application. It’s where the program starts execution.  
 - **Example**:  
-  ```csharp
-  static void Main(string[] args) { }
-  ```
+ Here is an example of a **basic C# program structure** with all the essential elements including imports, namespace, class, and method. This example will provide the starting skeleton for any C# program:
+
+```csharp
+// Importing necessary namespaces
+using System;
+
+// Defining a namespace for the program
+namespace BasicProgramStructure
+{
+    // Defining a class
+    class Program
+    {
+        // The Main method - entry point of the program
+        static void Main(string[] args)
+        {
+            // Printing a simple message to the console
+            Console.WriteLine("Hello, World!");
+
+            // Calling another method
+            GreetUser("John");
+        }
+
+        // A custom method that accepts a string parameter and prints a greeting message
+        static void GreetUser(string name)
+        {
+            Console.WriteLine("Hello, " + name + "!");
+        }
+    }
+}
+```
+
+---
+
+### **Explanation:**
+
+1. **Imports (`using` statements)**:
+   - `using System;` is used to include the **System namespace**, which contains essential classes like `Console` for input/output operations.
+   - Additional `using` statements can be added if needed for other libraries.
+
+2. **Namespace (`namespace`)**:
+   - A **namespace** is a container for classes and other types, helping to organize code and avoid naming conflicts. In this example, `BasicProgramStructure` is the namespace that wraps the program.
+
+3. **Class (`class`)**:
+   - A **class** is the blueprint for creating objects (though we don't use objects here, it is still necessary for code organization). `Program` is the class that contains the methods.
+
+4. **Main Method (`Main`)**:
+   - The **Main method** is the entry point of any C# program. It's where the execution starts.
+   - The `static` keyword means this method belongs to the class itself rather than an instance of the class.
+   - The `void` keyword indicates that this method does not return any value.
+   - `string[] args` is a parameter that can hold command-line arguments when the program starts (though not used here).
+
+5. **Custom Method (`GreetUser`)**:
+   - A simple **custom method** is defined outside the `Main` method. It takes a `string` argument (the user's name) and prints a personalized greeting.
+   - `static` means that this method belongs to the `Program` class itself, not to any object created from the `Program` class.
+
+---
+
+### **Output Example:**
+When you run the program, the console will display:
+```
+Hello, World!
+Hello, John!
+```
+
+This structure is the foundation for most C# programs and can be expanded as you add more classes, methods, and logic to your application.
 
 ---
 
